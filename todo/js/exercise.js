@@ -24,9 +24,9 @@
             var $newTaskInput = $('#new_task_input');
             MyApp.addToList($taskList, $newTaskInput);
         });
-        if (document.getElementById('new_complete_submit').checked) {
-            $("new_task").show();
-        } else {
-            $("#new_task").hide();
-        }
+        $(document).on('change', '.new_complete_submit', function() {
+            if (this.checked) {
+                $("li.new_task").addClass('completed');
+            }
+        });
     });
