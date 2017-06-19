@@ -2,7 +2,6 @@
 
 var MyApp = {};
 
-
 //addToList, removeFromList
 
 MyApp.compileItem = function(item){
@@ -28,6 +27,7 @@ $(document).ready(function(){
     MyApp.addToList($taskList,$newTaskInput);
   });
 	$( "li.new_task.checkBox" ).click(function() {
-	$( "li.new_task" ).remove();
+		console.log('I clicked on this;');
+	$( "li.new_task" ).addClass('completed');
   });
 });
