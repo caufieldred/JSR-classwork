@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>To Do Homework</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
-	<script src="js/exercise.js"></script>
-	 <script id="todo-template" type="text/x-handlebars-template">
-        <li>{{toDo}}</li>
+    <script src="js/exercise.js"></script>
+    <script id="todo-template" type="text/x-handlebars-template">
+        <li class="new_task">{{{toDo}}} <input class="checkBox" type="checkbox"/></li>
     </script>
 </head>
+
 <body>
-	<form id="new_task">
-		<input id="new_task_input"/>
-		<input type="submit" id="new_task_submit"/>
-	</form>
-	<ul id="task_list">
-		<li></li>
-	</ul>
+    <form id="new_task">
+        <input id="new_task_input" />
+        <input type="submit" id="new_task_submit" />
+    </form>
+    <ul id="task_list">
+    </ul>
 </body>
+
 </html>
