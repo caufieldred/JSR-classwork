@@ -20,14 +20,18 @@ $(document).ready(function(){
   var $newTaskForm = $('#new_task');
   var $taskList = $('#task_list');
   var $itemRemoveBox = $('li.new_task.checkBox');
-  var $itemRemove = $('li.new_task').html();
   $newTaskForm.submit(function(event){
     event.preventDefault();
     var $newTaskInput = $('#new_task_input');
     MyApp.addToList($taskList,$newTaskInput);
   });
-	$( "li.new_task.checkBox" ).click(function() {
-		console.log('I clicked on this;');
-	$( "li.new_task" ).addClass('completed');
-  });
+  $('input[type="checkbox"]').on('click', function(){
+    if ( $(this).is(':checked') ) {
+    	console.log('I clicked on this');
+        $( "li.new_task" ).addClass('completed');
+    } 
+    else {
+        return;
+    }
+});
 });
